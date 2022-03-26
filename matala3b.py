@@ -32,7 +32,7 @@ def longest_words(file):
         data2 = data1.read()
         file_without_special_char = re.sub('[^a-zA-Z0-9\n\.]', ' ', data2)
         words1 = re.split("\s|(?<!\d)[,.](?!\d)", file_without_special_char)
-        worsd1 = list(filter(None, words1))
+        words1 = list(filter(None, words1))
         sorte_word = sorted(words1,key=len,reverse=True) 
         
         return(sorte_word[:5])
